@@ -76,24 +76,28 @@
 // console.log(total);//45
 
 // ============збираємо ввід користувача і щось з ним робимо=====================
-const valueInputRef = document.querySelector('.js-value');
-const addValueBtn= document.querySelector('.js-add-value');
-const calcBtn= document.querySelector('.js-calculate');
-const numbers=[];
-let total=0;
+// const valueInputRef = document.querySelector('.js-value');
+// const addValueBtn= document.querySelector('.js-add-value');
+// const calcBtn= document.querySelector('.js-calculate');
+// const numbers=[];
+// let total=0;
 
-addValueBtn.addEventListener('click', function(){
-const value = Number(valueInputRef.value);
-numbers.push(value);
-valueInputRef.value ='';
-console.log(numbers);
+// addValueBtn.addEventListener('click', function(){
+// const value = Number(valueInputRef.value);
+// numbers.push(value);
+// valueInputRef.value ='';
+// console.log(numbers);
 
-});
+// });
 
-calcBtn.addEventListener('click', function() {
-for (const number of numbers){
-    console.log(number);
-    total += number;
-}
-console.log(total);
-});
+// calcBtn.addEventListener('click', function() {
+// for (const number of numbers){
+//     console.log(number);
+//     total += number;
+// }
+// console.log(total);
+// });
+// ==============================================17-06-20-робота на уроці -масиви/функції======================================================================
+const students =['Alex', 'Nikita', 'Boris'];
+const alex = students[0];
+console.log(alex);
