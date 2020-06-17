@@ -101,3 +101,88 @@
 // const students =['Alex', 'Nikita', 'Boris'];
 // const alex = students[0];
 // console.log(alex);
+// =================================repeta-vebinar-function-17-06-2020=========================================================================
+// const add=function (a,b) {
+//     console.log('a', a);
+//     console.log('b', b);
+
+//     // return 100;
+
+//     const result=a+b;
+    
+//     return result;
+    
+// };
+
+// const r1=add(2,5);
+// console.log(r1);
+// const r2=add(4,6);
+// console.log(r2);
+// const r3=add(1,15);
+// console.log(r3);
+// const r4=add(21,55);
+// console.log(r4);
+
+// example-1================================================
+// const friends=['Mango','Kiwi','Poly','Alax'];
+// // for (const friend of friends){
+// //     console.log(friend);
+// // }
+// const numbers=[1,2,3,4];
+//     // for (const number of numbers){
+//     //     console.log(number);
+//     // }
+// const logItems=function (items) {
+//     for(const item of items){
+//         console.log(item);
+
+//     }
+// }
+// logItems(friends);
+// logItems(numbers);
+
+// функція для пошуку друзів===================================
+// const friends=['Mango','Kiwi','Poly','Alax'];
+// const nameToFind='Poly';
+// // let message = 'такого друга нет';
+// // for (let friend of friends){
+// //     if (nameToFind===friend){
+// //         message='знайшли такого друга';
+// //         break;
+// //     }
+// // }
+// // console.log(message);
+
+// const findFriend=function(allFriends, name){
+//     console.log(allFriends);
+//     console.log(name);
+
+//     for (const friend of allFriends){
+//             if (name===friend){
+//                 return 'friend is find';
+//             };
+
+//         }
+//         return 'friend is not find';
+// };
+// const r1=findFriend(friends,'Poly');
+// console.log(r1);
+// const r2= findFriend(friends,'Kost');
+// console.log(r2);
+
+// example-3================================================
+const title= 'Top 10 benefits of React framework';
+// console.log(title);
+
+const words = title.toLowerCase().split(' ');
+
+const slug =words.join('-');
+// console.log(slug);
+
+const slugify =function(string){
+    const words = string.toLowerCase().split(' ');
+    const slug =words.join('-');
+    console.log(words);
+    return slug
+}
+slugify(title)
