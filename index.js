@@ -98,6 +98,6 @@
 // console.log(total);
 // });
 // ==============================================17-06-20-робота на уроці -масиви/функції======================================================================
-const students =['Alex', 'Nikita', 'Boris'];
-const alex = students[0];
-console.log(alex);
+// const students =['Alex', 'Nikita', 'Boris'];
+// const alex = students[0];
+// console.log(alex);
