@@ -186,3 +186,32 @@
 //     return slug
 // }
 // slugify(title)
+// ==============================урок 18-06-20-функції==========================
+
+const users = ["Alex", "Boris", "Nikita", "Nikita", "Nikita", "Borya", "Boryan", "Nikita"];
+
+const result = [];
+
+ for (const user of users) {
+    const arrayFromUser = [users.indexOf(user), user];
+    result.push(arrayFromUser)
+}
+console.log(result)
+
+// -------------------------------
+// let i = 0;
+// for (const user of users) {
+//     const arrayFromUser = [i, user];
+//     result.push(arrayFromUser);
+//     i += 1
+// }
+// console.log(result)
+
+// // ----------------------------------
+// for (let i = 0; i < users.length; i += 1) {
+//     const arrayFromUser = [i, users[i]];
+//     result.push(arrayFromUser)
+// }
+// console.log(result)
+
+// [[0,"Alex"], [1,"Boris"]];
