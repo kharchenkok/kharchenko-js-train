@@ -171,18 +171,18 @@
 // console.log(r2);
 
 // example-3================================================
-const title= 'Top 10 benefits of React framework';
-// console.log(title);
+// const title= 'Top 10 benefits of React framework';
+// // console.log(title);
 
-const words = title.toLowerCase().split(' ');
+// const words = title.toLowerCase().split(' ');
 
-const slug =words.join('-');
-// console.log(slug);
+// const slug =words.join('-');
+// // console.log(slug);
 
-const slugify =function(string){
-    const words = string.toLowerCase().split(' ');
-    const slug =words.join('-');
-    console.log(words);
-    return slug
-}
-slugify(title)
+// const slugify =function(string){
+//     const words = string.toLowerCase().split(' ');
+//     const slug =words.join('-');
+//     console.log(words);
+//     return slug
+// }
+// slugify(title)
