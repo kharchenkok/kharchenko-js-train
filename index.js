@@ -188,15 +188,15 @@
 // slugify(title)
 // ==============================урок 18-06-20-функції==========================
 
-const users = ["Alex", "Boris", "Nikita", "Nikita", "Nikita", "Borya", "Boryan", "Nikita"];
+// const users = ["Alex", "Boris", "Nikita", "Nikita", "Nikita", "Borya", "Boryan", "Nikita"];
 
-const result = [];
+// const result = [];
 
- for (const user of users) {
-    const arrayFromUser = [users.indexOf(user), user];
-    result.push(arrayFromUser)
-}
-console.log(result)
+//  for (const user of users) {
+//     const arrayFromUser = [users.indexOf(user), user];
+//     result.push(arrayFromUser)
+// }
+// console.log(result)
 
 // -------------------------------
 // let i = 0;
