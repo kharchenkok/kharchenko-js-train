@@ -214,4 +214,187 @@
 // }
 // console.log(result)
 
-// [[0,"Alex"], [1,"Boris"]];
+// [[0,"Alex"], [1,"Boris"]]
+
+// ===============home-task-repeat-train===========================================================================
+// ======module01=====================
+// =====task-1=============
+// let name ='Генератор защитного поля'
+// let price=1000
+// console.log(`Выбран "${name}", цена за штуку ${price} кредитов'`)
+// price=2000
+// console.log(`Выбран "${name}", цена за штуку ${price} кредитов'`)
+// ==========task-2============
+// ======ex1=============
+// const total = 100;
+// const ordered = 30;
+// if(total>=ordered){
+//     console.log('Заказ оформлен, с вами свяжется менеджер')
+// }else{
+//     console.log('На складе недостаточно твоаров!')
+// }
+// ==========ex2==========
+// const total=100;
+// let ordered =prompt('введіть кількість замовлення')
+// if(isNaN(ordered)){
+//     console.log('введіть число');
+    
+// }else if(total>=ordered){
+//     console.log('Заказ оформлен, с вами свяжется менеджер')
+// }else{
+//     console.log('На складе недостаточно твоаров!')
+// }
+// ============task-3================
+// const ADMIN_PASSWORD = 'jqueryismyjam';
+// let message;
+// let inputPass=prompt('введіть ваш пароль');
+// if(inputPass!==null){
+//     if(inputPass===ADMIN_PASSWORD){
+//         message='Добро пожаловать!';
+//         alert(message);
+        
+//     } else{
+//         message='Доступ запрещен, неверный пароль!'
+//         alert(message);
+//     }
+    
+// }else{
+//     console.log('Отменено пользователем!');
+    
+// }
+// =============task-4=======================
+// let credits=23580;
+// let pricePerDroid=3000;
+// let inputNumberDroid=prompt('сколько дроидов вы хотите купить?')
+// let totalPrice=inputNumberDroid*pricePerDroid
+// if (inputNumberDroid!==null){
+//     if(isNaN(inputNumberDroid)){
+//         alert('введіть число');
+//     }else if(totalPrice<=credits){
+//         let lastCredits=credits-totalPrice;
+//         alert(`ви купили ${inputNumberDroid}. На вашому рахунку ${lastCredits} `);
+//     }else{
+//         alert('Недостаточно средств на счету')
+//     }
+
+// }else{
+//     console.log('Отменено пользователем!');    
+// }
+// =============task-5=======================
+// let inputCountry=prompt('введите свою страну')
+// let deliveryPrice=0
+// if(inputCountry!==null){
+//     if(isNaN(inputCountry)){
+//     switch(inputCountry.toLowerCase()){
+//         case 'китай':
+//             deliveryPrice=100;
+//             alert(`Доставка в ${inputCountry} буде коштувати ${deliveryPrice} кредитів`);
+//             break;
+//         case 'чили':
+//             deliveryPrice=250;
+//             alert(`Доставка в ${inputCountry} буде коштувати ${deliveryPrice} кредитів`);
+//             break;
+//         case 'австралия':
+//             deliveryPrice=170;
+//             alert(`Доставка в ${inputCountry} буде коштувати ${deliveryPrice} кредитів`);
+//             break;
+//         case 'индия':
+//             deliveryPrice=80;
+//             alert(`Доставка в ${inputCountry} буде коштувати ${deliveryPrice} кредитів`);
+//             break;
+//         case 'ямайка':
+//             deliveryPrice=120;
+//             alert(`Доставка в ${inputCountry} буде коштувати ${deliveryPrice} кредитів`);
+//             break;
+//         case '':
+            
+//             alert('ви не вказали жодної країни');
+//             break;
+//         default:
+//             alert('У вашій країні доставка недоступна');  
+
+//     }
+//     }else{alert('ви ввели число')}
+// } else{alert('отменено пользователем')}
+
+// =============task-6=======================
+// let input;
+// let total=0;
+// do{
+//     input=prompt('введите число');
+//     if(isNaN(input)){
+//     alert('Было введено не число, попробуйте еще раз');
+//     }else{
+//     total += Number(input);
+//     alert(`Общая сумма чисел равна ${total}`)}
+        
+        
+// }while(input!==null)
+
+// ======================================module-02========================================
+// ============task-1=====================
+// const logItems = function(array) {
+//     for(let i=0; i<=array.length; i+=1){
+//         let newNumb = array.indexOf(array[i]) + 1;
+//         console.log(`${newNumb}-${array[i]}`);
+        
+//     }
+
+    // for(let element of array){
+       
+    //     let newNumb=array.indexOf(element)+1
+        
+    //      console.log(`${newNumb}-${element}`
+
+    //      );
+    // }
+    
+//   };
+  
+  
+//   logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
+  
+//   logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+// ============task-7=========================
+const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+
+const isLoginValid = function(login) {
+        if(login.length>=4 && login.length<=16){
+        return true;
+      }
+      return false;
+
+};
+
+const isLoginUnique = function(allLogins, login) {
+  if(allLogins.includes(login)){
+      return false;
+  }
+  return true;
+};
+
+const addLogin = function(allLogins, login) {
+    if(isLoginValid(login) && isLoginUnique(allLogins, login)){
+        allLogins.push(login);
+        console.log(allLogins);
+        
+        return 'Логин успешно добавлен!';
+    }else if(!isLoginValid(login)){
+        return 'Ошибка! Логин должен быть от 4 до 16 символов'
+    }else if(!isLoginUnique(allLogins, login)){
+        return 'Такой логин уже используется!'
+    }
+};
+
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
+console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
+console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+    
+
+
+
