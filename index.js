@@ -357,44 +357,94 @@
 //   logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
 
 // ============task-7=========================
-const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
+// const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-const isLoginValid = function(login) {
-        if(login.length>=4 && login.length<=16){
-        return true;
-      }
-      return false;
+// const isLoginValid = function(login) {
+//         if(login.length>=4 && login.length<=16){
+//         return true;
+//       }
+//       return false;
 
-};
+// };
 
-const isLoginUnique = function(allLogins, login) {
-  if(allLogins.includes(login)){
-      return false;
-  }
-  return true;
-};
+// const isLoginUnique = function(allLogins, login) {
+//   if(allLogins.includes(login)){
+//       return false;
+//   }
+//   return true;
+// };
 
-const addLogin = function(allLogins, login) {
-    if(isLoginValid(login) && isLoginUnique(allLogins, login)){
-        allLogins.push(login);
-        console.log(allLogins);
+// const addLogin = function(allLogins, login) {
+//     if(isLoginValid(login) && isLoginUnique(allLogins, login)){
+//         allLogins.push(login);
+//         console.log(allLogins);
         
-        return 'Логин успешно добавлен!';
-    }else if(!isLoginValid(login)){
-        return 'Ошибка! Логин должен быть от 4 до 16 символов'
-    }else if(!isLoginUnique(allLogins, login)){
-        return 'Такой логин уже используется!'
-    }
-};
+//         return 'Логин успешно добавлен!';
+//     }else if(!isLoginValid(login)){
+//         return 'Ошибка! Логин должен быть от 4 до 16 символов'
+//     }else if(!isLoginUnique(allLogins, login)){
+//         return 'Такой логин уже используется!'
+//     }
+// };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
-console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
-console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-    
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
+// console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
+// console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+// console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
+
+
+// ==========================module 04-train==========================================================
+// ==========callback=====================================
+// const printMessage = function(message) {
+//   console.log(message);
+// };
+
+// const higherOrderFunction = function(callback) {
+//   const string = 'HOCs are awesome';
+//   callback(string);
+// };
+
+// higherOrderFunction(printMessage);
+
+
+// =============Абстрагирование повторения================
+// const repeatNumb=function(n){
+// for (let i = 0; i < n; i += 1) {
+//     console.log(i);
+//   }
+// }
+//  repeatNumb(5) 
+// ========================
+const printValue = function(value) {
+    console.log(value);
+  };
+  
+  const prettyPrint = function(value) {
+    console.log('Logging value: ', value);
+  };
+  
+  const repeat = function(n, action) {
+    for (let i = 0; i < n; i += 1) {
+      action(i);
+    }
+  };
+  
+  // Передаем printValue как callback-функцию
+  repeat(3, printValue);
+  // 0
+  // 1
+  // 2
+  
+  // Передаем prettyPrint как callback-функцию
+  repeat(3, prettyPrint);
+  // Logging value: 0
+  // Logging value: 1
+  // Logging value: 2
+  
+
 
 
 
