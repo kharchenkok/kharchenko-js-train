@@ -680,16 +680,45 @@
   // Logging value: 2
   
 // =================================практика по 5 модулю============================
-const baseSalary = 30000;
-const overtime = 10;
-const rate = 20;
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
 
-const getWage = (baseSalary, overtime, rate) => {
-  return baseSalary + overtime * rate;
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
+
+// getWage(baseSalary, overtime, rate);
+
+// console.log(getWage(baseSalary, overtime, rate));
+
+// const employee={
+//     baseSalary:30000,
+//     overtime:10,
+//     rate:20,
+//     getWage(){
+//         return this.baseSalary+this.overtime*this.rate
+//     }
+// }
+
+// console.log(employee.getWage());
+const Manager =function(name, sales) {
+    this.name=name;
+    this.sales=sales;
+    // this.sell=function(){
+    //     this.sales+=1;
+    // }
 };
 
-getWage(baseSalary, overtime, rate);
+Manager.prototype.sell=function(){
+    this.sales+=1;
+}
 
-
-
+console.dir(Manager)
+const mango=new Manager('Mango',5);
+console.log(mango);
+mango.sell();
+console.log(mango);
+// const poly=new Manager('Poly',10);
+// console.log(poly);
 
