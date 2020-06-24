@@ -594,42 +594,42 @@
 // самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся 
 // как свойства объекта в формате "имя":"кол-во задач".
 
-const findBestEmployee = function(employees) {
-  let vallArr=Object.values(employees)
-  let maxVall=Math.max(...vallArr);
-  console.log(vallArr);
-  console.log(maxVall);
+// const findBestEmployee = function(employees) {
+//   let vallArr=Object.values(employees)
+//   let maxVall=Math.max(...vallArr);
+//   console.log(vallArr);
+//   console.log(maxVall);
   
-};
+// };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
-console.log(
-  findBestEmployee({
-    ann: 29,
-    david: 35,
-    helen: 1,
-    lorence: 99,
-  }),
-); // lorence
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99,
+//   }),
+// ); // lorence
 
-console.log(
-  findBestEmployee({
-    poly: 12,
-    mango: 17,
-    ajax: 4,
-  }),
-); // mango
+// console.log(
+//   findBestEmployee({
+//     poly: 12,
+//     mango: 17,
+//     ajax: 4,
+//   }),
+// ); // mango
 
-console.log(
-  findBestEmployee({
-    lux: 147,
-    david: 21,
-    kiwi: 19,
-    chelsy: 38,
-  }),
-); // lux
+// console.log(
+//   findBestEmployee({
+//     lux: 147,
+//     david: 21,
+//     kiwi: 19,
+//     chelsy: 38,
+//   }),
+// ); // lux
 
 // ==========================module 04-train==========================================================
 // ==========callback=====================================
@@ -679,6 +679,16 @@ console.log(
   // Logging value: 1
   // Logging value: 2
   
+// =================================практика по 5 модулю============================
+const baseSalary = 30000;
+const overtime = 10;
+const rate = 20;
+
+const getWage = (baseSalary, overtime, rate) => {
+  return baseSalary + overtime * rate;
+};
+
+getWage(baseSalary, overtime, rate);
 
 
 

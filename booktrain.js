@@ -167,6 +167,6 @@
 // let arr = [1, 2, 3];
 // console.log(arr[arr.length - 1]) 
 // ================================================== об'єкти ==================
-const obj={1:'a', 2:'b', 3:'c'};
-console.log(obj);
+// const obj={1:'a', 2:'b', 3:'c'};
+// console.log(obj);
 
