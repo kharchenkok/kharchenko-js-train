@@ -216,8 +216,8 @@
 
 // [[0,"Alex"], [1,"Boris"]]
 
-// ===============home-task-repeat-train===========================================================================
-// ======module01=====================
+// ===============home-task-repeat-train========================================================================================================
+// ====================================================module01=====================================
 // =====task-1=============
 // let name ='Генератор защитного поля'
 // let price=1000
@@ -331,7 +331,7 @@
         
 // }while(input!==null)
 
-// ======================================module-02========================================
+// ==============================================================module-02===================================================================================
 // ============task-1=====================
 // const logItems = function(array) {
 //     for(let i=0; i<=array.length; i+=1){
@@ -355,6 +355,181 @@
 //   logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
   
 //   logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+
+// =====================task-2=====================
+// Напиши скрипт подсчета стоимости гравировки украшений. Для этого создай функцию calculateEngravingPrice(message, pricePerWord) 
+// принимающую строку (в строке будут только слова и пробелы)
+// и цену гравировки одного слова, и возвращающую цену гравировки всех слов в строке.
+
+// const calculateEngravingPrice = function(message, pricePerWord) {
+//   let messageArr = message.split(' ');
+//   return messageArr.length*pricePerWord
+//   };
+
+// console.log(
+//   calculateEngravingPrice(
+//     'Proin sociis natoque et magnis parturient montes mus',
+//     10,
+//   ),
+// ); // 80
+
+// console.log(
+//   calculateEngravingPrice(
+//     'Proin sociis natoque et magnis parturient montes mus',
+//     20,
+//   ),
+// ); // 160
+
+// console.log(
+//   calculateEngravingPrice('Donec orci lectus aliquam est magnis', 40),
+// ); // 240
+
+// console.log(
+//   calculateEngravingPrice('Donec orci lectus aliquam est magnis', 20),
+// ); // 120
+
+// ===================task-3==================================
+// Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку
+//  (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
+
+// const findLongestWord = function(string) {
+//   let newArr =string.split(' ');
+//   console.log(newArr);
+  
+//   let maxWord = newArr[0];
+// //   for (let i=0; i<newArr.length; i+=1){
+// //     if(newArr[i].length>maxWord.length){
+// //       maxWord=newArr[i]
+// //     };
+// //   };
+// //   return maxWord
+    
+// // };
+
+// for(let word of newArr){
+//   if(word.length>maxWord.length){
+//     maxWord=word
+//   }
+// }
+// return maxWord
+// }
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+
+// console.log(findLongestWord('Google do a roll')); // 'Google'
+
+// console.log(findLongestWord('May the force be with you')); // 'force
+
+// ======================task-4====================================
+// Напиши функцию formatString(string) которая принимает строку и форматирует ее если необходимо.
+
+// Если длина строки не превышает 40 символов, функция возвращает ее в исходном виде.
+// Если длина больше 40 символов, то функция обрезает строку до 40-ка символов и добавляет в конец 
+// строки троеточие '...', после чего возвращает укороченную версию.
+
+// const formatString = function(string) {
+//   console.log(string.length);
+//   if(string.length>40){
+//     return string.slice(0,40)+'...';
+//   };
+
+//   return string
+  
+// };
+
+
+// console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+// // вернется оригинальная строка
+
+// console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+// // вернется форматированная строка
+
+// console.log(formatString('Curabitur ligula sapien.'));
+// // вернется оригинальная строка
+
+// console.log(
+//   formatString(
+//     'Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.',
+//   ),
+// );
+// вернется форматированная строка
+
+// ============task-5==============================================
+// Напиши функцию checkForSpam(message), принимающую 1 параметр message - строку. 
+// Функция проверяет ее на содержание слов spam и sale. Если нашли зарещенное слово то функция возвращает true, 
+// если запрещенных слов нет функция возвращает false. Слова в строке могут быть в произвольном регистре.
+
+// const checkForSpam = function(message) {
+//   if (message.toLowerCase().includes('spam')|| message.toLowerCase().includes('sale')){
+//     return true
+//   }
+//   return false
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(checkForSpam('Latest technology news')); // false
+
+// console.log(checkForSpam('JavaScript weekly newsletter')); // false
+
+// console.log(checkForSpam('Get best sale offers now!')); // true
+
+// console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
+// =========================task-6==========================================
+
+// Напиши скрипт со следующим функционалом:
+
+// При загрузке страницы пользователю предлагается в prompt ввести число. Ввод сохраняется в переменную input и добавляется в массив чисел numbers.
+// Операция ввода числа пользователем и сохранение в массив продолжается до тех пор, пока пользователь не нажмет Cancel в prompt.
+// После того как пользователь прекратил ввод нажав Cancel, если массив не пустой, необходимо посчитать сумму всех элементов массива и записать ее в переменную total.
+//  Используй цикл for или for...of. После чего в консоль выведи строку 'Общая сумма чисел равна [сумма]'.
+// Делать проверку того, что пользователь ввел именно число, а не произвольный набор символов, не обязательно. 
+// Если хочешь, в случае некорректного ввода, показывай alert с текстом 'Было введено не число, попробуйте еще раз', 
+// при этом результат prompt записывать в массив чисел не нужно, после чего снова пользователю предлагается ввести число в prompt.
+
+// let input=prompt('введіть число');
+// const numbers = [];
+// let total = 0;
+// let inputNumb;
+// do{
+// if (isNaN(input)){
+//   alert('ви ввели не число, введіть число');
+//   continue;
+// }else if(input!==null && input!==''){
+//   numbers.push(Number(input))
+// };
+// if(input===null&&numbers.length>0){
+//   for (let number of numbers){
+//     total+=number
+//   }
+// }
+// }while (input !== null) {
+//   console.log(`total sum ${total}`);
+  
+// }
+// do {
+//           input = prompt('Введіть,будь ласка, число');
+//           if (isNaN(input)) {
+//               alert('Введіть, будь ласка,число');
+//               continue; 
+  
+//               }else if(input!==null&&input!==''){
+//                   inputNumb=Number(input);
+//                   numbers.push(inputNumb);
+//                   console.log(numbers);
+//               };
+//           if (input===null){
+//               if(numbers.length>0){
+//                   for(let number of numbers){
+//                       total+=number;
+//                   };
+//               } else{
+//                   console.log('Масив пустий');
+//               }
+//           };
+          
+//       } while(input !==null);
+//       console.log(`Загальна сума чисел ${total}`);
 
 // ============task-7=========================
 // const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
@@ -395,6 +570,66 @@
 // console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 
+// ===========================================module 03==========================================================================
+// ========task02==================
+// Напиши функцию countProps(obj), считающую кол-во свойств в объекте. Функция возвращает число - количество свойств.
+
+// const countProps = function(obj) {
+//   console.table(Object.keys(obj));
+  
+// };
+
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(countProps({})); // 0
+
+// console.log(countProps({ name: 'Mango', age: 2 })); // 2
+
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+
+
+// ==============================task-04==================================================
+// Напиши функцию findBestEmployee(employees), которая принимает объект сотрудников и возвращает имя 
+// самого продуктивного (который выполнил больше всех задач). Сотрудники и кол-во выполненых задач содержатся 
+// как свойства объекта в формате "имя":"кол-во задач".
+
+const findBestEmployee = function(employees) {
+  let vallArr=Object.values(employees)
+  let maxVall=Math.max(...vallArr);
+  console.log(vallArr);
+  console.log(maxVall);
+  
+};
+
+/*
+ * Вызовы функции для проверки работоспособности твоей реализации.
+ */
+console.log(
+  findBestEmployee({
+    ann: 29,
+    david: 35,
+    helen: 1,
+    lorence: 99,
+  }),
+); // lorence
+
+console.log(
+  findBestEmployee({
+    poly: 12,
+    mango: 17,
+    ajax: 4,
+  }),
+); // mango
+
+console.log(
+  findBestEmployee({
+    lux: 147,
+    david: 21,
+    kiwi: 19,
+    chelsy: 38,
+  }),
+); // lux
 
 // ==========================module 04-train==========================================================
 // ==========callback=====================================
@@ -418,28 +653,28 @@
 // }
 //  repeatNumb(5) 
 // ========================
-const printValue = function(value) {
-    console.log(value);
-  };
+// const printValue = function(value) {
+//     console.log(value);
+//   };
   
-  const prettyPrint = function(value) {
-    console.log('Logging value: ', value);
-  };
+//   const prettyPrint = function(value) {
+//     console.log('Logging value: ', value);
+//   };
   
-  const repeat = function(n, action) {
-    for (let i = 0; i < n; i += 1) {
-      action(i);
-    }
-  };
+//   const repeat = function(n, action) {
+//     for (let i = 0; i < n; i += 1) {
+//       action(i);
+//     }
+//   };
   
   // Передаем printValue как callback-функцию
-  repeat(3, printValue);
+  // repeat(3, printValue);
   // 0
   // 1
   // 2
   
   // Передаем prettyPrint как callback-функцию
-  repeat(3, prettyPrint);
+  // repeat(3, prettyPrint);
   // Logging value: 0
   // Logging value: 1
   // Logging value: 2
