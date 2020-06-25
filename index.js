@@ -702,23 +702,52 @@
 // }
 
 // console.log(employee.getWage());
-const Manager =function(name, sales) {
-    this.name=name;
-    this.sales=sales;
-    // this.sell=function(){
-    //     this.sales+=1;
-    // }
-};
+// const Manager =function(name, sales) {
+//     this.name=name;
+//     this.sales=sales;
+//     // this.sell=function(){
+//     //     this.sales+=1;
+//     // }
+// };
 
-Manager.prototype.sell=function(){
-    this.sales+=1;
+// Manager.prototype.sell=function(){
+//     this.sales+=1;
+// }
+
+// console.dir(Manager)
+// const mango=new Manager('Mango',5);
+// console.log(mango);
+// mango.sell();
+// console.log(mango);
+// // const poly=new Manager('Poly',10);
+// // console.log(poly);
+
+// ===================================================================25-06-2020====================================================================================
+// const object={
+//     name: 'some name',
+//     showThis: function(){
+//         console.log(this)
+//         const
+//     }
+// }
+// =====================================================================================
+const getInfo=function(){
+    console.log(this.name);
+    
 }
 
-console.dir(Manager)
-const mango=new Manager('Mango',5);
-console.log(mango);
-mango.sell();
-console.log(mango);
-// const poly=new Manager('Poly',10);
-// console.log(poly);
 
+
+const User =function(name, age, status){
+    this.name=name
+    this.age=age
+    this.status=status
+
+    this.getInfo=getInfo
+
+}
+const alex=new User('Alex', 25,'student')
+const poly=new User('Poly', 27,'student')
+const nikita=new User('Nikita', 35,'teacher')
+
+console.log(alex);
