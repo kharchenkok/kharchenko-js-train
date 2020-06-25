@@ -526,7 +526,7 @@
 //               } else{
 //                   console.log('Масив пустий');
 //               }
-//           };
+//           };                                                                  
           
 //       } while(input !==null);
 //       console.log(`Загальна сума чисел ${total}`);
