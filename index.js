@@ -731,23 +731,45 @@
 //     }
 // }
 // =====================================================================================
-const getInfo=function(){
-    console.log(this.name);
+// const getInfo=function(){
+//     console.log(this.name);
+    
+// }
+
+
+
+// const User =function(name, age, status){
+//     this.name=name
+//     this.age=age
+//     this.status=status
+
+//     this.getInfo=getInfo
+
+// }
+// const alex=new User('Alex', 25,'student')
+// const poly=new User('Poly', 27,'student')
+// const nikita=new User('Nikita', 35,'teacher')
+
+// console.log(alex);
+// ===============================================================================================================
+// function checkAge(age) {
+//     if (age > 18) {
+//       return true;
+//     } else {
+//       return confirm('Родители разрешили?');
+//     }
+//   }
+
+//   function checkAge(age){
+//       age>18 ? true : confirm('Родители разрешили?'
+//   }
+
+function min (a,b){
+    return  console.log(Math.min(a,b));
     
 }
 
 
-
-const User =function(name, age, status){
-    this.name=name
-    this.age=age
-    this.status=status
-
-    this.getInfo=getInfo
-
-}
-const alex=new User('Alex', 25,'student')
-const poly=new User('Poly', 27,'student')
-const nikita=new User('Nikita', 35,'teacher')
-
-console.log(alex);
+min(2, 5) 
+min(3, -1) 
+min(1, 1) 
