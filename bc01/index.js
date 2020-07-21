@@ -42,4 +42,31 @@
 
 // // console.log(max(1,2,3,4,5,6,7,8))
 // max(1,2,3,4,5,6,7,8)
+// ==========================21-07-2020=======функції==============================
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
+// const ask = function(question, yes, no) {
+//     confirm(question) ? yes() : no();
+//   }
+  
+//   ask(
+//     "Вы согласны?",
+//     ()=> {alert("Вы согласились.")},
+//     ()=> {alert("Вы отменили выполнение.")},
+//   );
 
+//   const hello = function(name='гость'){
+//           return console.log(`Привет ${name}`)
+      
+//   }
+//  hello()
+
+// const repeatStr = function(str='',n=2){
+// return  console.log(str.repeat(n));
+// }
+
+const repeatStr = (str='',n=2) => console.log(str.repeat(n));
+    
+repeatStr('hello')
