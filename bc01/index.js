@@ -50,7 +50,7 @@
 // const ask = function(question, yes, no) {
 //     confirm(question) ? yes() : no();
 //   }
-  
+
 //   ask(
 //     "Вы согласны?",
 //     ()=> {alert("Вы согласились.")},
@@ -59,7 +59,7 @@
 
 //   const hello = function(name='гость'){
 //           return console.log(`Привет ${name}`)
-      
+
 //   }
 //  hello()
 
@@ -67,6 +67,29 @@
 // return  console.log(str.repeat(n));
 // }
 
-const repeatStr = (str='',n=2) => console.log(str.repeat(n));
-    
-repeatStr('hello')
+// const repeatStr = (str='',n=2) => console.log(str.repeat(n));
+
+// repeatStr('hello')
+
+
+const checkForSpam = function (message) {
+  let arrMessage = message.toLowerCase().split(" ");
+//   console.log(wordOfMessage[2].includes("sale"));
+  for(let i=0; i<arrMessage.length; i+=1){
+      if (arrMessage[i].includes("spam") || arrMessage[i].includes("sale")) {
+            return true;
+            } 
+            return false;
+}
+}
+
+
+
+
+console.log(checkForSpam("Latest technology news")); // false
+
+console.log(checkForSpam("JavaScript weekly newsletter")); // false
+
+console.log(checkForSpam("Get best sale offers now!")); // true
+
+console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
