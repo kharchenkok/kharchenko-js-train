@@ -70,26 +70,98 @@
 // const repeatStr = (str='',n=2) => console.log(str.repeat(n));
 
 // repeatStr('hello')
+// ========================================================================
 
+// const checkForSpam = function (message) {
+//   let result = false;
+//   let arrMessage = message.toLowerCase().split(" ");
+//   // console.log(arrMessage);
+//   for (let i = 0; i < arrMessage.length; i += 1) {
+//     // console.log(arrMessage[i]);
+//     if (arrMessage[i].includes("spam" )|| arrMessage[i].includes("sale") ){
+//       result = true;
+//     } 
+    
+//   }
+//   return result
+// };
+// // console.log(checkForSpam("Latest technology news")); // false
 
-const checkForSpam = function (message) {
-  let arrMessage = message.toLowerCase().split(" ");
-//   console.log(wordOfMessage[2].includes("sale"));
-  for(let i=0; i<arrMessage.length; i+=1){
-      if (arrMessage[i].includes("spam") || arrMessage[i].includes("sale")) {
-            return true;
-            } 
-            return false;
-}
-}
+// // console.log(checkForSpam("JavaScript weekly newsletter")); // false
 
+// console.log(checkForSpam("Get best sale offers now!")); // true
 
+// console.log(checkForSpam("[SPAM] How to earn fast money?")); //true
 
+// ==============================22-07-2020 об'єкти=========================================
+// Напишите функцию isEmpty(obj), которая возвращает true,
+// если у объекта нет свойств, иначе false.
 
-console.log(checkForSpam("Latest technology news")); // false
+// let schedule = {};
 
-console.log(checkForSpam("JavaScript weekly newsletter")); // false
+// const isEmpty = (schedule)=>{
+//   let keysArr = Object.keys(schedule)
+//   if (keysArr.length === 0){
+//     return true
+//   }
+//   return false
+//   // for (let key in schedule){
+//   //   if (key === "8:30"){
+//   //     return false
+//   //   }
 
-console.log(checkForSpam("Get best sale offers now!")); // true
+// }
+// // const isEmpty = (schedule)=>{
 
-console.log(checkForSpam("[SPAM] How to earn fast money?")); // true
+// //   if (schedule["8:30"]){
+// //       return false
+// //     }
+// //     return true
+// // }
+
+// alert( isEmpty(schedule) ); // true
+
+// schedule["8:30"] = "get up";
+
+// alert( isEmpty(schedule) ); // false
+// ===============================================================
+
+// У нас есть объект, в котором хранятся зарплаты нашей команды:
+
+// let salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130
+// }
+// // Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+
+// // Если объект salaries пуст, то результат должен быть 0.
+// let sum = 0
+// const getTotalSum = (salaries)=>{
+//   let salariesArr = Object.values(salaries)
+//   for(let salary of salariesArr){
+//     sum+=salary
+//   }
+//   return sum
+
+// }
+// console.log(getTotalSum (salaries));
+
+// Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.
+
+// let menu = {
+//   width: 200,
+//   height: 300,
+//   title: "My menu",
+// };
+
+// const multiplyNumeric = function (obj) {
+//   for (let key in obj){
+//     if (typeof obj[key] === 'number'){
+//       obj[key] *=2
+//     }
+//   }
+//   return obj
+// };
+
+// console.log(multiplyNumeric(menu));
