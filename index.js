@@ -764,12 +764,12 @@
 //       age>18 ? true : confirm('Родители разрешили?'
 //   }
 
-function min (a,b){
-    return  console.log(Math.min(a,b));
+// function min (a,b){
+//     return  console.log(Math.min(a,b));
     
-}
+// }
 
 
-min(2, 5) 
-min(3, -1) 
-min(1, 1) 
+// min(2, 5) 
+// min(3, -1) 
+// min(1, 1) 
