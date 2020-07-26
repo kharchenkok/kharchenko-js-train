@@ -209,36 +209,65 @@
 // sum() (суммировать) возвращает сумму сохранённых значений.
 // mul() (умножить) перемножает сохранённые значения и возвращает результат.
 
-let calculator = {
-read: function(...params){
-    for (let i=0; i< params.length; i+=1){
-        this[i] = params[i]
-    }
-// this.a=a
-// this.b=b
+// let calculator = {
+// read: function(...params){
+//     for (let i=0; i< params.length; i+=1){
+//         this[i] = params[i]
+//     }
+// // this.a=a
+// // this.b=b
 
-},
-sum: function(){
-    let totalSum = 0
-    for (let key in calculator){
-        if (typeof calculator[key] === "number"){
-            totalSum+=calculator[key]
-        }
-    }
-    return totalSum
-},
-mul: function(){
-    let sumOfMult=1
-    for (let key in calculator){
-        if (typeof calculator[key] === "number"){
-            sumOfMult*=calculator[key]
-        }
-    }
-    return sumOfMult
-}
-}
+// },
+// sum: function(){
+//     let totalSum = 0
+//     for (let key in calculator){
+//         if (typeof calculator[key] === "number"){
+//             totalSum+=calculator[key]
+//         }
+//     }
+//     return totalSum
+// },
+// mul: function(){
+//     let sumOfMult=1
+//     for (let key in calculator){
+//         if (typeof calculator[key] === "number"){
+//             sumOfMult*=calculator[key]
+//         }
+//     }
+//     return sumOfMult
+// }
+// }
 
-calculator.read(1,2,3,5);
-console.log(calculator.sum());
-console.log(calculator.mul());
-console.log(calculator);
+// calculator.read(1,2,3,5);
+// console.log(calculator.sum());
+// console.log(calculator.mul());
+// console.log(calculator);
+
+// ==============================модуль 4 Репета==============================
+// const bar = function() {
+//     console.log('bar');
+//   };
+  
+//   const baz = function() {
+//     console.log('baz');
+//   };
+  
+//   const foo = function() {
+//     console.log('foo');
+//     bar();
+//     baz();
+//   };
+  
+//   foo();
+
+// =============================
+//   const makeSheff = function(name){
+//       return function(dish){
+//           console.log(`${name} готує ${dish}`);
+//       }
+//   }
+//   const mango = makeSheff('Mango')
+//   const poly = makeSheff('Poly')
+// console.dir(mango);
+//   mango('котлети')
+//   poly('чай')
