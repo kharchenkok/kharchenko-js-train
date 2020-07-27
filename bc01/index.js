@@ -193,12 +193,12 @@
 //       if ((i % 3 === 0) && (i % 5 === 0)){
 //           console.log("fizzbuzz")
 //         } else if (i % 5 === 0){
-//             console.log("buzz") 
+//             console.log("buzz")
 //         }else if (i % 3 === 0){
 //             console.log("fizz")
 //         }else{
 //         console.log(i);
-//         }       
+//         }
 //   }
 // };
 // FizzBuzz(15);
@@ -247,17 +247,17 @@
 // const bar = function() {
 //     console.log('bar');
 //   };
-  
+
 //   const baz = function() {
 //     console.log('baz');
 //   };
-  
+
 //   const foo = function() {
 //     console.log('foo');
 //     bar();
 //     baz();
 //   };
-  
+
 //   foo();
 
 // =============================
@@ -271,3 +271,39 @@
 // console.dir(mango);
 //   mango('котлети')
 //   poly('чай')
+// =============================27-07-2020======= =============================
+
+// let storeStatistics = {
+//   tshirtsSold: 0,
+//   jasketsSold: 0,
+//   socksSold: 0,
+// };
+
+// const SellSomething = function (color, size, type, quantity) {
+//   this.color = color;
+//   this.size = size;
+//   this.type = type;
+//   this.quantity = quantity;
+//   this.userOrder = function () {
+//     console.log(
+//       `User order: goods - "${type}", quantity - ${quantity}, size - ${size}, color - ${color}`
+//     );
+//   };
+
+//   this.orderStatistics = function () {
+//     if (Object.keys(storeStatistics).includes(this.type)) {
+//       storeStatistics[this.type] += this.quantity;
+//     }
+//     return console.log(storeStatistics);
+//   };
+// };
+
+// let tshirtsOrder = new SellSomething("black", "L", "tshirtsSold", 2);
+// let jasketsOrder = new SellSomething("white", "M", "jasketsSold", 7);
+// let socksOrder = new SellSomething("blue", "S", "socksSold", 5);
+// tshirtsOrder.userOrder();
+// jasketsOrder.userOrder();
+// socksOrder.userOrder();
+// tshirtsOrder.orderStatistics();
+// jasketsOrder.orderStatistics();
+// socksOrder.orderStatistics();
