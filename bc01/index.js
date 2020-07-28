@@ -307,3 +307,58 @@
 // tshirtsOrder.orderStatistics();
 // jasketsOrder.orderStatistics();
 // socksOrder.orderStatistics();
+// ===============================================28/07/2020============================
+
+// 1) Даны два массива: ['a', 'b', 'c'] и [1, 2, 3]. Объедините их вместе.
+// 2) Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
+// 3) Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1].
+// 4) Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [1, 2, 3].
+
+// 5)Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].// const a = [1, 2, 3, 4, 5];
+// let arrA = ["a", "b", "c"];
+// let arrB = [1, 2, 3];
+// let arrAB = arrA.concat(arrB);
+// console.log(arrAB);
+
+// let arrD = ["a", "b", "c"];
+// let arrC = arrD.push(1, 2, 3);
+// console.log(arrD);
+// console.log(arrC);
+
+// let arrE = [1, 2, 3];
+// let arrL = arrE.reverse(arrE);
+// console.log(arrL);
+
+// let arrM = [1, 2, 3, 4, 5];
+// let arrK = arrM.slice(0, 3);
+// console.log(arrK);
+
+// let arrP = [1, 2, 3, 4, 5];
+// let arrT = arrP.splice(1, 2);
+// console.log(arrT);
+// console.log(arrP);
+
+
+// 1) Вибираємо випадкове число (від 0 до довжини масива);
+// const a = [1, 2, 3, 4, 5];
+// let b = Math.round(Math.random()*(a.length-1)+1);
+// console.log(a[b]);
+// console.log(a[b]);
+// console.log(a[b]);
+// console.log(a[b]);
+// console.log(a[b]);
+// console.log(a[b]);
+
+// 2)// -) Записуємо в змінну строку з промта
+// -) Зробити строку масивом
+// -) Скопіювати масив в нову змінну
+// -) Реверсимо масив 
+// -) З масивів робимо строки
+
+// let str = prompt('your string')
+// let strArr = str.split(' ')
+// console.log(strArr);
+// let revArr = strArr.reverse(strArr)
+// console.log(revArr);
+// let revArrStr = revArr.join(' ')
+// console.log(revArrStr);
