@@ -338,7 +338,6 @@
 // console.log(arrT);
 // console.log(arrP);
 
-
 // 1) Вибираємо випадкове число (від 0 до довжини масива);
 // const a = [1, 2, 3, 4, 5];
 // let b = Math.round(Math.random()*(a.length-1)+1);
@@ -352,7 +351,7 @@
 // 2)// -) Записуємо в змінну строку з промта
 // -) Зробити строку масивом
 // -) Скопіювати масив в нову змінну
-// -) Реверсимо масив 
+// -) Реверсимо масив
 // -) З масивів робимо строки
 
 // let str = prompt('your string')
@@ -362,3 +361,127 @@
 // console.log(revArr);
 // let revArrStr = revArr.join(' ')
 // console.log(revArrStr);
+
+// ========================================29-07-2020==========================
+
+// let creaturesArr = [];
+// class Creature {
+//   constructor(type, planet, status, sex) {
+//     this.type = type;
+//     this.planet = planet;
+//     this.status = status;
+//     this.sex = sex;
+//   }
+//   get show() {
+//     return `This ${this.type} is from ${this.planet} and has ${this.status} status`;
+//   }
+//   set changePlanet(str) {
+//     this.planet = str;
+//     return this.planet;
+//   }
+//   static intro() {
+//     console.log("There is a billions types of creatures all around the world!");
+//   }
+//   static checkCreatures() {
+//     console.log(creaturesArr);
+//   }
+// }
+// class Human extends Creature {
+//   constructor(name, type, planet, status, sex, nationality) {
+//     super(type, planet, status, sex);
+//     this.name = name;
+//     this.nationality = nationality;
+//   }
+//   addToCreaturesList() {
+//     creaturesArr.push({
+//       name: this.name,
+//       planet: this.planet,
+//       nationlity: this.nationality,
+//     });
+//   }
+// }
+
+// class Animal extends Creature{
+//     constructor (name, color, chainClass, type, planet){
+//         super (type, planet)
+//         this.name = name
+//         this.color = color
+//         this.chainClass = chainClass
+//     }
+//     addToCreaturesList() {
+//         creaturesArr.push({
+//           name: this.name,
+//           planet: this.planet,
+//           type:this.type,
+//           chainClass:this.chainClass
+//         });
+//       }
+// }
+
+// // let cat = new Animal('Murzik', 'black', 'meat-eating', 'animal', 'Earth', "three-dimensional", "male"  )
+// let cat = new Animal('Murzik', 'black', 'meat-eating', 'animal', 'Earth')
+// cat.addToCreaturesList()
+// // Creature.checkCreatures();
+// let Adam = new Human(
+//   "Adam",
+//   "human",
+//   "Mars",
+//   "three-dimensional",
+//   "male",
+//   "Ukrainian"
+// );
+// Adam.addToCreaturesList();
+// let Eva = new Human(
+//   "Eva",
+//   "human",
+//   "Venus",
+//   "three-dimensional",
+//   "female",
+//   "Ukrainian"
+// );
+// Eva.addToCreaturesList();
+// Creature.checkCreatures();
+
+// =============================================================================
+// ________________________TASK#1
+// Реализуйте класс Student (Студент), который будет наследовать от класса User.
+// Этот класс должен иметь следующие свойства:
+//  name (имя, наследуется от User), surname (фамилия, наследуется от User),
+//  year (год поступления в вуз).
+//  Класс должен иметь метод getFullName() (наследуется от User),
+// с помощью которого можно вывести одновременно имя и фамилию студента.
+// Также класс должен иметь метод getCourse(), который будет выводить текущий курс студента (от 1 до 5).
+// Курс вычисляется так: нужно от текущего года отнять год поступления в вуз. Текущий год получите самостоятельно.
+// Вот так должен выглядеть класс User, от которого наследуется наш Student:
+
+// class User {
+//   constructor(name, surname, nick = "defolt") {
+//     this.name = name;
+//     this.surname = surname;
+//     this.nick = nick;
+//   }
+//   getFullName() {
+//     return `${this.name} ${this.surname}`;
+//   }
+// }
+
+// class Student extends User {
+//   constructor(name, surname, year) {
+//     super(name, surname);
+//     this.year = year;
+//   }
+//   getCourse() {
+//     let currentYear = new Date().getFullYear();
+//     let currentCourse = currentYear - this.year;
+//     return currentCourse;
+//   }
+// }
+// // Вот так должен работать наш класс:
+// let student = new Student("Иван", "Иванов", 2017);
+// console.log(student.nick); //выведет 'Иван'
+// // console.log(student.name); //выведет 'Иван'
+// console.log(student.surname); //выведет 'Иванов'
+// console.log(student.getFullName()); //выведет 'Иван Иванов'
+// console.log(student.year); //выведет 2017console.log(worker.getCourse()); //выведет 3 - третий курс, так как текущий год 2020
+// console.log(student.getCourse());
+// // student.getCourse();
