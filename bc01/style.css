@@ -1,0 +1,8 @@
+.circle-style{
+    display: inline-block;
+    width: 30px;
+height:30px;
+border-radius:50%;
+background-color:#817e7ea1;
+margin-right: 15px;
+}
