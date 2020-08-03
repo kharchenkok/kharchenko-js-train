@@ -47,39 +47,39 @@ const body = document.querySelector("body");
 //     body.style.backgroundColor = input.value
 // }
 
-
 // input.addEventListener('input', changeColor)
 // ============================================================================
 // При нажатии на кнопку создаётся квадрат, при изменение инпута (range) - меняется его размер (размер грани должен быть больше 100 пикселей)
 // При нажатии на вторую кнопку - квадрат удаляется
 
-let createBtn = document.createElement('button')
-let deleteBtn = document.createElement('button')
-let inputRange = document.createElement('input')
-inputRange.setAttribute("type","range")
-createBtn.textContent = 'Створити квадрат'
-deleteBtn.textContent = 'Видалити квадрат'
-body.prepend(createBtn)
-body.prepend(inputRange)
-body.prepend(deleteBtn)
+let createBtn = document.createElement("button");
+let deleteBtn = document.createElement("button");
+let inputRange = document.createElement("input");
+inputRange.setAttribute("type", "range");
+createBtn.textContent = "Створити квадрат";
+deleteBtn.textContent = "Видалити квадрат";
+let markup = [];
 
-let square = document.createElement('div')
-body.append(square)
-let createSquare = function(){
-    square.classList.add('square-style')
+markup.push(createBtn, inputRange, deleteBtn);
+body.prepend(...markup);
+// body.prepend(createBtn)
+// body.prepend(inputRange)
+// body.prepend(deleteBtn)
 
-}
-let deleteSquare = function(){
-    square.classList.remove('square-style')
+let square = document.createElement("div");
+body.append(square);
+let createSquare = function () {
+  square.classList.add("square-style");
+};
+let deleteSquare = function () {
+  square.classList.remove("square-style");
+};
 
-}
+let changeSquare = function () {
+  square.style.width = Number(inputRange.value) + "px";
+  square.style.height = Number(inputRange.value) + "px";
+};
 
-let changeSquare = function(){
-    square.style.width = Number(inputRange.value) +'px'
-    square.style.height = Number(inputRange.value) +'px'
-}
-
-
-createBtn.addEventListener('click', createSquare)
-deleteBtn.addEventListener('click', deleteSquare)
-inputRange.addEventListener('input', changeSquare)
+createBtn.addEventListener("click", createSquare);
+deleteBtn.addEventListener("click", deleteSquare);
+inputRange.addEventListener("input", changeSquare);
