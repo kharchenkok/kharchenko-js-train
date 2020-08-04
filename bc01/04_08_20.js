@@ -50,22 +50,19 @@ const inputWrapper = inputForm.querySelector(".input-wrapper");
 const inputArr = inputWrapper.querySelectorAll("input");
 const buttonWrapper = inputForm.querySelector(".button-wrapper");
 const btnSubmit = inputForm.querySelector(".btnSubmit");
-console.log(inputForm);
-console.log(inputWrapper);
-console.log(inputArr);
-console.log(buttonWrapper);
-console.log(btnSubmit);
+
 
 let checkInputForm = function (e) {
   e.preventDefault();
   inputArr.forEach((input) => {
     if (input.checked) {
-      buttonWrapper.insertAdjacentHTML(
+        console.log(input);
+    buttonWrapper.insertAdjacentHTML(
         "beforeend",
         `<p>Ви обрали${input.value}</p>`
       );
     } else {
-      alert("Ви нічого не обрали");
+       alert("Ви нічого не обрали");
     }
   });
 };
