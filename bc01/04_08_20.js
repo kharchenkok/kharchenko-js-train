@@ -55,8 +55,8 @@ const btnSubmit = inputForm.querySelector(".btnSubmit");
 let checkInputForm = function (e) {
   e.preventDefault();
   inputArr.forEach((input) => {
+    console.log(input);
     if (input.checked) {
-        console.log(input);
     buttonWrapper.insertAdjacentHTML(
         "beforeend",
         `<p>Ви обрали${input.value}</p>`

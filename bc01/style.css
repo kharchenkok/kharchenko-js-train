@@ -14,3 +14,16 @@
   background-color: #817e7ea1;
   margin-right: 15px;
 }
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+list-style: none;
+
+}
+
+.gallery-item{
+  display: flex;
+  flex-direction: column;
+  
+}
