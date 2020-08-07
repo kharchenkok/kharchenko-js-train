@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- <input type="number" id="input1">
     <input type="number" id="input2">
     <button class="button">Result</button> -->
-    
 
-    <form action="#" class="input-form">
+    <!-- <form action="#" class="input-form">
         <div class="input-wrapper">
           <input type="radio" id="contactChoice1"
            name="contact" value="email">
@@ -29,18 +28,59 @@
         <div class="button-wrapper">
           <button type="submit" class="btnSubmit">Submit</button>
         </div>
-      </form>
+      </form> -->
 
-      <!-- ====================05-08-2020================================= -->
-    <ul class="gallery">
+    <!-- ====================05-08-2020================================= -->
+    <!-- <ul class="gallery">
      
-    </ul>
-  
+    </ul> -->
+    <!-- ==============================07-08-2020=============================== -->
+    <!-- Форма > input*4 (имя, фамилия, вес, группа крови, желаемый вес) -->
+    <form class="input-form">
+      <div class="input-wrapper">
+        <label for="name">Name</label>
+        <input type="text" class="name" name="name" />
+
+        <label for="lastName">LastName</label>
+        <input type="text" class="lastName" name="lastName" />
+
+        <label for="weight">Weight</label>
+        <input type="text" class="weight" name="weight"/>
+
+        <label for="bloodType">blood type</label>
+        <input type="text" class="bloodType" name="bloodType"/>
+        
+        <input type="text" class="lastName" name="lastName" placeholder="Last name" />
+        <label for="contactChoice3">Weight</label>
+        <input type="text" class="lastName" name="lastName" placeholder="Last name" />
+        <label for="contactChoice3">Weight</label>
+        <input type="text" class="lastName" name="lastName" placeholder="Last name" />
+        <label for="contactChoice3">Weight</label>
+        <input type="text" class="lastName" name="lastName" placeholder="Last name" />
+        <label for="contactChoice3">Weight</label>
+      </div>
+      <div class="button-wrapper">
+        <button type="submit" class="btnSubmit">Submit</button>
+      </div>
+    </form>
+    <!-- -Имя
+-Фамилия
+-Вес
+-Желаемый вес
+-Рост
+-Возраст
+-Группа крови
+Для женщин: (10 × вес в килограммах) + (6,25 × рост в сантиметрах) − (5 × возраст в годах) − 161
+Для мужчин: (10 × вес в килограммах) + (6,25 × рост в сантиметрах) − (5 × возраст в годах) + 5 -->
+
+    -->
+
     <script src="./index.js" type="module"></script>
     <!-- <script src="./31_07_20.js" type="module"></script> -->
     <!-- <script src="./03_08_20.js" type="module"></script> -->
     <!-- <script src="./04_08_20.js" type="module"></script> -->
-    <script src="./05_08_20.js" type="module"></script>
+    <!-- <script src="./05_08_20.js" type="module"></script> -->
+    <script src="./07_08_20.js" type="module"></script>
     <!-- <script src="./pokemon.js" type="module"></script> -->
-</body>
+  </body>
 </html>
