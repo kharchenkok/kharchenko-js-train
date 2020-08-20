@@ -27,3 +27,7 @@ list-style: none;
   flex-direction: column;
   
 }
+.form{
+  width: 500px;
+  border: 1px grey;
+}
